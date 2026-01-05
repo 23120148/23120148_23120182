@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab03 - Đồ án DevOps</title>
+    <style>
+        /* Thiết lập chung */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* 1. Phần Tiêu đề */
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            color: #2c3e50;
+            font-size: 2.5em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        .subtitle {
+            color: #7f8c8d;
+            font-size: 1.1em;
+        }
+
+        /* 2. Phần Khung thông tin thành viên */
+        .team-section {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap; /* Tự động xuống dòng trên màn hình nhỏ */
+            margin-bottom: 50px;
+        }
+
+        .member-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            padding: 30px;
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .member-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover; /* Giữ ảnh không bị méo */
+            margin-bottom: 15px;
+            border: 3px solid #3498db;
+        }
+
+        .member-name {
+            font-size: 1.4em;
+            margin: 10px 0;
+            color: #2c3e50;
+        }
+
+        .member-info {
+            font-size: 0.95em;
+            color: #555;
+            margin: 5px 0;
+            line-height: 1.6;
+        }
+
+        /* 3. Phần Thông tin liên quan */
+        .resources-section {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            margin-top: 0;
+            color: #2c3e50;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        li::before {
+            content: "📂"; /* Biểu tượng thư mục */
+            position: absolute;
+            left: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #3498db;
+            font-weight: bold;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: #2980b9;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Lab03 - Đồ án DevOps</h1>
+            <div class="subtitle">Thông tin nhóm thực hiện dự án</div>
+        </header>
+
+        <div class="team-section">
+            
+            <div class="member-card">
+                <img src="/image/img1.jpg" alt="Avatar SV1" class="avatar">
+                <h3 class="member-name">Nguyễn Duy Trường</h3>
+                <div class="member-info">
+                    <strong>MSSV:</strong> 23120182<br>
+                    <strong>Email:</strong> 23120182@student.hcmus.edu.vn<br>
+                    <strong>Vai trò:</strong> Đang giận Trúc Ngọc!
+                </div>
+            </div>
+
+            <div class="member-card">
+                <img src="/image/img2.jpg" alt="Avatar SV2" class="avatar">
+                <h3 class="member-name">Trần Trúc Ngọc</h3>
+                <div class="member-info">
+                    <strong>MSSV:</strong> 23120148<br>
+                    <strong>Email:</strong> 23120148@student.hcmus.edu.vn<br>
+                    <strong>Vai trò:</strong> Đang bị Duy Trường giận!
+                </div>
+            </div>
+
+        </div>
+
+        <div class="resources-section">
+            <h2>Tài liệu & Liên kết</h2>
+            <ul>
+                <li>
+                    <strong>Báo cáo đồ án:</strong> 
+                    <a href="#" target="_blank">Tải xuống file PDF</a>
+                </li>
+                <li>
+                    <strong>Slide thuyết trình:</strong> 
+                    <a href="#" target="_blank">Xem trên Google Slides</a>
+                </li>
+                <li>
+                    <strong>Video Demo:</strong> 
+                    <a href="#" target="_blank">Xem trên YouTube</a>
+                </li>
+                <li>
+                    <strong>Source Code:</strong> 
+                    <a href="https://github.com" target="_blank">Repository trên GitHub</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>
