@@ -1,5 +1,8 @@
-FROM alpine:3.18
-RUN apk update && apk add openssl curl nginx
-COPY . /usr/share/nginx/html
+FROM debian:10
+RUN apt update && \
+    apt install -y nginx curl openssl && \
+    rm -rf /var/lib/apt/lists/*
+COPY . /var/www/html
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
+
