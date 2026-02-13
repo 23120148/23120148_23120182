@@ -1,9 +1,8 @@
 FROM nginx:alpine
-# tạo user
 RUN adduser -D appuser
 COPY . /usr/share/nginx/html
-# đổi quyền
 RUN chown -R appuser:appuser /usr/share/nginx/html
-# chuyển sang user không phải root
+RUN mkdir -p /var/cache/nginx /var/log/nginx /var/run/nginx && \
+    chown -R appuser:appuser /var/cache/nginx /var/log/nginx /var/run/nginx
 USER appuser
 CMD ["nginx", "-g", "daemon off;"]
